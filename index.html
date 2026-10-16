@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --card-bg: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 550px;
+            width: 100%;
+            padding: 40px 30px;
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+            border: 1px solid #334155;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 24px;
+            letter-spacing: -0.05em;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        /* Standard HTML form placeholder. Since this is a static site without a backend, 
+           we instruct users to point this to a form processor later. */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        @media (min-width: 480px) {
+            form {
+                flex-direction: row;
+                gap: 0;
+                background-color: #0f172a;
+                padding: 6px;
+                border-radius: 50px;
+                border: 1px solid #475569;
+            }
+        }
+
+        input[type="email"] {
+            padding: 14px 20px;
+            border-radius: 50px;
+            border: 1px solid #475569;
+            background-color: #0f172a;
+            color: var(--text-main);
+            font-size: 1rem;
+            width: 100%;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        @media (min-width: 480px) {
+            input[type="email"] {
+                border: none;
+                background-color: transparent;
+                flex-grow: 1;
+            }
+        }
+
+        input[type="email"]:focus {
+            border-color: var(--accent);
+        }
+
+        button {
+            padding: 14px 28px;
+            border-radius: 50px;
+            border: none;
+            background-color: var(--accent);
+            color: #0f172a;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            white-space: nowrap;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">🚀 ProjectLaunch</div>
+        <h1>Something exciting is on the way.</h1>
+        <p>We are currently working hard behind the scenes to bring you a brand new digital experience. Sign up below to get notified when we launch!</p>
+        
+        <div class="form-container">
+            <!-- Replace the action URL with your form provider (Formspree, HubSpot, Mailchimp, etc.) later -->
+            <form action="#" method="POST" onsubmit="alert('Thank you for subscribing! (This is a preview template. Connect a form backend to collect responses.)'); return false;">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Notify Me</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Your Company. All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
